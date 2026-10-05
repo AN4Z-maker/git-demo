@@ -1,0 +1,95 @@
+:root {
+    --color-ink: #173b50;
+    --color-muted: #526875;
+    --color-primary: #145c80;
+    --color-primary-hover: #0c425e;
+    --color-light: #edf6fa;
+    --color-white: #ffffff;
+    --color-border: #cbdde6;
+    --space: 1.5rem;
+    --radius: 0.6rem;
+    --width: 1120px;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--color-ink); background: var(--color-white); line-height: 1.65; }
+img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
+a { color: var(--color-primary); text-underline-offset: 0.25em; }
+a:hover { color: var(--color-primary-hover); }
+:focus-visible { outline: 3px solid #b05a00; outline-offset: 4px; }
+h1, h2, h3 { line-height: 1.15; margin: 0 0 1rem; }
+h1 { font-size: clamp(2.3rem, 5vw, 4rem); letter-spacing: -0.04em; }
+h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); letter-spacing: -0.025em; }
+h3 { font-size: 1.3rem; }
+p { margin: 0 0 1.25rem; }
+.container { width: min(var(--width), calc(100% - 2.5rem)); margin-inline: auto; }
+.skip-link { position: absolute; top: -100px; left: 1rem; background: white; padding: 1rem; z-index: 10; }
+.skip-link:focus { top: 1rem; }
+.site-header { border-bottom: 1px solid var(--color-border); }
+.header-content { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.25rem; }
+.brand { color: var(--color-ink); font-size: 1.3rem; font-weight: 700; text-decoration: none; line-height: 1.2; }
+.brand span { display: block; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; margin-top: 0.35rem; }
+.main-navigation { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.main-navigation a { color: var(--color-ink); text-decoration: none; padding-block: 0.4rem; border-bottom: 2px solid transparent; }
+.main-navigation a:hover, .main-navigation a[aria-current="page"] { border-color: var(--color-primary); color: var(--color-primary); }
+.hero, .page-intro { background: var(--color-light); }
+.hero-layout { display: grid; align-items: center; gap: 2.5rem; padding-block: 3.5rem; }
+.eyebrow { font-weight: 700; font-size: 0.75rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 1rem; }
+.hero-description { max-width: 34rem; color: var(--color-muted); font-size: 1.1rem; }
+.hero-image { aspect-ratio: 5 / 4; object-fit: cover; }
+.button { display: inline-block; padding: 0.85rem 1.4rem; border: 1px solid var(--color-primary); border-radius: var(--radius); background: var(--color-primary); color: white; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; }
+.button:hover { background: var(--color-primary-hover); color: white; }
+.button-secondary { background: white; color: var(--color-primary); }
+.section { padding-block: 3.5rem; }
+.section-tinted { background: var(--color-light); }
+.section-heading { max-width: 42rem; margin-bottom: 2rem; }
+.section-heading p, .service-card p, .benefit p { color: var(--color-muted); }
+.intro-layout, .card-grid, .benefits, .contact-layout, .service-detail { display: grid; gap: var(--space); }
+.intro-copy { max-width: 40rem; }
+.benefit { border-top: 2px solid var(--color-border); padding-top: 1.25rem; }
+.benefit-number { color: var(--color-primary); font-size: 0.85rem; font-weight: 700; margin-bottom: 0.75rem; }
+.service-card { border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; background: white; }
+.service-card img { border-radius: 0; aspect-ratio: 8 / 5; object-fit: cover; }
+.service-card-content { padding: 1.5rem; }
+.section-action { margin-top: 2rem; }
+.page-intro { padding-block: 3rem; }
+.page-intro p:last-child { max-width: 40rem; margin-bottom: 0; color: var(--color-muted); }
+.service-detail { align-items: center; padding-block: 2.5rem; border-bottom: 1px solid var(--color-border); gap: 2rem; }
+.service-detail:first-child { padding-top: 0; }
+.service-detail:last-child { border-bottom: 0; padding-bottom: 0; }
+.service-detail img { aspect-ratio: 3 / 2; object-fit: cover; }
+.service-detail ul { padding-left: 1.25rem; margin-bottom: 0; }
+.service-detail li { margin-block: 0.45rem; }
+.cta { background: var(--color-light); padding-block: 3rem; }
+.cta-content { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; }
+.cta p { margin-bottom: 0; max-width: 36rem; }
+.contact-details { padding: 1.75rem; border-radius: var(--radius); background: var(--color-light); align-self: start; }
+.contact-details address { font-style: normal; }
+.contact-details dt { font-weight: 700; margin-top: 1.25rem; }
+.contact-details dd { margin: 0; }
+.contact-form { display: grid; gap: 1.1rem; }
+.form-field { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-field label { font-weight: 700; }
+input, select, textarea { width: 100%; border: 1px solid #8ca6b4; border-radius: 0.35rem; padding: 0.8rem; color: var(--color-ink); background: white; font: inherit; }
+textarea { resize: vertical; min-height: 150px; }
+.form-note { color: var(--color-muted); font-size: 0.9rem; margin-bottom: 0; }
+.contact-form .button { justify-self: start; }
+.quote-information { margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--color-border); border-radius: var(--radius); }
+.quote-information ul { padding-left: 1.25rem; margin-bottom: 0; }
+.site-footer { background: var(--color-ink); color: white; padding-block: 2.5rem; }
+.footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+.site-footer a { color: white; }
+.site-footer p { margin-bottom: 0.5rem; }
+.footer-navigation { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.copyright { font-size: 0.85rem; color: #d2e3ec; margin-top: 2rem; }
+
+@media (min-width: 640px) {
+    .card-grid, .benefits { grid-template-columns: repeat(3, 1fr); }
+    .section { padding-block: 4.5rem; }
+}
+@media (min-width: 900px) {
+    .hero-layout { grid-template-columns: 1.1fr 1fr; padding-block: 4.5rem; }
+    .intro-layout { grid-template-columns: 1fr 1.7fr; gap: 4rem; }
+    .service-detail { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+    .contact-layout { grid-template-columns: 0.85fr 1.3fr; gap: 3.5rem; }
+}
